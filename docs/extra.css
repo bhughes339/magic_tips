@@ -1,0 +1,16 @@
+code {
+    color: #cc2255 !important;
+}
+
+hr {
+    border-bottom: 0.3rem solid rgba(0,0,0,.30) !important
+}
+
+h2 {
+    font-weight: bold !important;
+}
+
+/* code.cs {
+    background-color: #F0F0F0 !important;
+    color: black !important;
+} */

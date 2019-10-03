@@ -1,0 +1,19 @@
+site_name: Billy Hughes
+site_url: http://whughes.meditech.com
+
+nav:
+- 'Home': 'index.md'
+- 'Text Editor Extensions': 'text_ed.md'
+- 'Useful MAGIC/CS Tips':
+  - 'Printing data structures': 'magic_tips/data_structures.md'
+  - 'Debugging': 'magic_tips/debugging.md'
+  - 'Miscellaneous': 'magic_tips/misc.md'
+
+dev_addr: 'whughes.meditech.com:80'
+
+theme:
+  name: material
+  highlightjs: false
+
+extra_css:
+  - 'extra.css'
