@@ -1,0 +1,477 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="http://whughes.meditech.com/magic_tips/data_structures/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Printing data structures - Billy Hughes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#output-raf-data-to-a-local-file" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://whughes.meditech.com" title="Billy Hughes" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Billy Hughes
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Printing data structures
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://whughes.meditech.com" title="Billy Hughes" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Billy Hughes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../text_ed/" title="Text Editor Extensions" class="md-nav__link">
+      Text Editor Extensions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Useful MAGIC/CS Tips
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Useful MAGIC/CS Tips
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Printing data structures
+      </label>
+    
+    <a href="./" title="Printing data structures" class="md-nav__link md-nav__link--active">
+      Printing data structures
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#output-raf-data-to-a-local-file" title="Output RAF data to a local file" class="md-nav__link">
+    Output RAF data to a local file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#print-packed-data-to-front-end" title="Print packed data to front end" class="md-nav__link">
+    Print packed data to front end
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#safely-print-subscripts-to-screen" title="Safely print subscripts to screen" class="md-nav__link">
+    Safely print subscripts to screen
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../debugging/" title="Debugging" class="md-nav__link">
+      Debugging
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../misc/" title="Miscellaneous" class="md-nav__link">
+      Miscellaneous
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#output-raf-data-to-a-local-file" title="Output RAF data to a local file" class="md-nav__link">
+    Output RAF data to a local file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#print-packed-data-to-front-end" title="Print packed data to front end" class="md-nav__link">
+    Print packed data to front end
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#safely-print-subscripts-to-screen" title="Safely print subscripts to screen" class="md-nav__link">
+    Safely print subscripts to screen
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Printing data structures</h1>
+                
+                <p>NOTE: Unless otherwise stated, these commands are designed to be used from the MAGIC front end.</p>
+<h2 id="output-raf-data-to-a-local-file">Output RAF data to a local file</h2>
+<pre><code>&quot;&quot;^X^LN,DO{&gt;(:RAF[X],Y)^X N((X:0X)_&quot;^&quot;)^/RPT[LN+1^LN,&quot;1&quot;],Y:0X^/RPT[LN,&quot;2&quot;]}
+%Z.copy.raf.to.pc.flat(^/RPT,&quot;C:\Users\username\output.txt&quot;,&quot;&quot;,&quot;N&quot;)
+</code></pre>
+
+<p>$G Styling:</p>
+<pre><code>&quot;&quot;^X^LN,DO{&gt;(:RAF[X],Y)^X N(&quot;[&quot;_X~(&quot;,&quot;:32)_&quot;] = &quot;)^/RPT[LN+1^LN,&quot;1&quot;],Y~(&quot;^&quot;:32)^/RPT[LN,&quot;2&quot;]}
+%Z.copy.raf.to.pc.flat(^/RPT,&quot;C:\Users\username\output.txt&quot;,&quot;&quot;,&quot;N&quot;)
+</code></pre>
+
+<p>You can import the text file into a spreadsheet (using ^ as the delimiter) to separate the subscripts and data for easy viewing.</p>
+<p>$G Styling with RAF name and head node:</p>
+<pre><code>^:RAF[segments]^RAF,RAF%0~(&quot;,&quot;:32)^BASE
+&quot;&quot;^X^LN,K(/RPT),IF{[RAF] N(&quot;[&quot;_BASE_&quot;] = &quot;)^/RPT[LN+1^LN,&quot;1&quot;],[RAF]~(&quot;^&quot;:32)^/RPT[LN,&quot;2&quot;]}
+DO{&gt;([RAF,X],Y)^X N(&quot;[&quot;_BASE_&quot;,&quot;_X~(&quot;,&quot;:32)_&quot;] = &quot;)^/RPT[LN+1^LN,&quot;1&quot;],Y~(&quot;^&quot;:32)^/RPT[LN,&quot;2&quot;]}
+%Z.copy.raf.to.pc.flat(^/RPT,&quot;C:\Users\username\output.txt&quot;,&quot;&quot;,&quot;N&quot;)
+</code></pre>
+
+<h2 id="print-packed-data-to-front-end">Print packed data to front end</h2>
+<pre><code>&lt;PACKED DATA&gt;^X
+0^CT,IF{E(X#0)'=L(X|0) N(&quot;Not packed data.&quot;)^#;DO{X IF{U(X)^Y N(&quot;Piece&quot;,CT:2L,&quot;-&quot;,Y:0X)^#},CT+1^CT}}
+</code></pre>
+
+<ul>
+<li>Broke out into two lines in case the packed data location is a long string</li>
+</ul>
+<p>Example:</p>
+<pre><code>:GXA[&quot;2&quot;]^X
+0^CT,IF{E(X#0)'=L(X|0) N(&quot;Not packed data.&quot;)^#;DO{X IF{U(X)^Y N(&quot;Piece&quot;,CT:2L,&quot;-&quot;,Y:0X)^#},CT+1^CT}}
+</code></pre>
+
+<h2 id="safely-print-subscripts-to-screen">Safely print subscripts to screen</h2>
+<p>When printing delimited subscript values to screen, append <code>:0X</code> to the variable. This will replace the unprintable characters with spaces.</p>
+<p>Example:</p>
+<pre><code>&quot;&quot;^CT^X,DO{&gt;*AA[X]^X,N(X:0X)^#,CT+1^CT&lt;50}
+</code></pre>
+
+<p>You can also use translation (<code>~</code>). <code>X~(",":32)</code> will convert unprintable characters to commas. You can use any character in place of the comma (such as "^").</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../text_ed/" title="Text Editor Extensions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Text Editor Extensions
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../debugging/" title="Debugging" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Debugging
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
