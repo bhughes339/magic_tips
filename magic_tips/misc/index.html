@@ -327,8 +327,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#get-a-list-of-procedures-for-a-change-number-from-the-front-end" title="Get a list of procedures for a change number from the front end" class="md-nav__link">
-    Get a list of procedures for a change number from the front end
+  <a href="#print-list-of-procedures-for-a-change-number" title="Print list of procedures for a change number" class="md-nav__link">
+    Print list of procedures for a change number
   </a>
   
 </li>
@@ -515,8 +515,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#get-a-list-of-procedures-for-a-change-number-from-the-front-end" title="Get a list of procedures for a change number from the front end" class="md-nav__link">
-    Get a list of procedures for a change number from the front end
+  <a href="#print-list-of-procedures-for-a-change-number" title="Print list of procedures for a change number" class="md-nav__link">
+    Print list of procedures for a change number
   </a>
   
 </li>
@@ -708,18 +708,15 @@ O(:,1N1013076)
 K(&amp;IA[&quot;ADM&quot;]R[5.64]UPD[300.01])
 </code></pre>
 
-<h2 id="get-a-list-of-procedures-for-a-change-number-from-the-front-end">Get a list of procedures for a change number from the front end</h2>
+<h2 id="print-list-of-procedures-for-a-change-number">Print list of procedures for a change number</h2>
 <pre><code>OPEN NPR
-&quot;&lt;APPLICATION&gt;&quot;^ia
-&quot;&lt;RELEASE&gt;&quot;^ir
-&quot;&lt;CHANGE NUMBER&gt;&quot;^iaU
+`&lt;APPLICATION&gt;,&lt;RELEASE&gt;,&lt;CHANGE NUMBER&gt;'^{ia,ir,iaU}
 &quot;&quot;^qi^LF,N(iaU)N^#,DO{+(&amp;IA[ia]R[ir]UPD[iaU]D[qi],Y)^qi N(Y|0_._Y|1)^#,LF+1^LF,IF{LF=15 N(&quot;&lt;Enter&gt;&quot;)^#,#0,&quot;&quot;^LF}}
 </code></pre>
 
 <p>Example:</p>
-<pre><code>&quot;MRI&quot;^ia
-&quot;5.6&quot;^ir
-&quot;305.5034&quot;^iaU
+<pre><code>OPEN NPR
+`MRI,5.67,385.05'^{ia,ir,iaU}
 &quot;&quot;^qi^LF,N(iaU)N^#,DO{+(&amp;IA[ia]R[ir]UPD[iaU]D[qi],Y)^qi N(Y|0_._Y|1)^#,LF+1^LF,IF{LF=15 N(&quot;&lt;Enter&gt;&quot;)^#,#0,&quot;&quot;^LF}}
 </code></pre>
 
