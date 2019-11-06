@@ -112,22 +112,19 @@ K(&IA["ADM"]R[5.64]UPD[300.01])
 ```
 
 
-## Get a list of procedures for a change number from the front end
+## Print list of procedures for a change number
 
 ```
 OPEN NPR
-"<APPLICATION>"^ia
-"<RELEASE>"^ir
-"<CHANGE NUMBER>"^iaU
+`<APPLICATION>,<RELEASE>,<CHANGE NUMBER>'^{ia,ir,iaU}
 ""^qi^LF,N(iaU)N^#,DO{+(&IA[ia]R[ir]UPD[iaU]D[qi],Y)^qi N(Y|0_._Y|1)^#,LF+1^LF,IF{LF=15 N("<Enter>")^#,#0,""^LF}}
 ```
 
 Example:
 
 ```
-"MRI"^ia
-"5.6"^ir
-"305.5034"^iaU
+OPEN NPR
+`MRI,5.67,385.05'^{ia,ir,iaU}
 ""^qi^LF,N(iaU)N^#,DO{+(&IA[ia]R[ir]UPD[iaU]D[qi],Y)^qi N(Y|0_._Y|1)^#,LF+1^LF,IF{LF=15 N("<Enter>")^#,#0,""^LF}}
 ```
 
