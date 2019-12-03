@@ -1,5 +1,4 @@
-
-NOTE: Unless otherwise stated, these commands are designed to be used from the MAGIC front end.
+# Miscellaneous
 
 ## Programmer Utilities
 

@@ -1,5 +1,4 @@
-
-NOTE: Unless otherwise stated, these commands are designed to be used from the MAGIC front end.
+# Printing Data Structures
 
 ## Output RAF data to a local file
 
