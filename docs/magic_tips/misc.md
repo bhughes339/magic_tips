@@ -187,6 +187,14 @@ OPEN MIS
 
 Replace `500^PG` with the minimum number of spool report pages you want to count.
 
+Sorted by number of pages:
+
+```
+OPEN MIS
+K(/BIGSPOOL),""^X,500^PG,DO{+(*GXA[X],Y)^X IF{PG<Y|11 IF{Y|1;"[No Title]"}^/BIGSPOOL[Y|11,X]}}
+""^X^CT,DO{<(/BIGSPOOL[X],Y)^X CT+1^CT,IF{CT\12=0 N("***Continue***")^#,#0},N("Spool file",X#1S,"-",X#0S,"pages")N(" ->",Y)^#}
+```
+
 
 ## Firewall tests from the front end
 
