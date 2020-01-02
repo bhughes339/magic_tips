@@ -786,6 +786,12 @@ K(&amp;IA[&quot;ADM&quot;]R[5.64]UPD[300.01])
 </code></pre>
 
 <p>Replace <code>500^PG</code> with the minimum number of spool report pages you want to count.</p>
+<p>Sorted by number of pages:</p>
+<pre><code>OPEN MIS
+K(/BIGSPOOL),&quot;&quot;^X,500^PG,DO{+(*GXA[X],Y)^X IF{PG&lt;Y|11 IF{Y|1;&quot;[No Title]&quot;}^/BIGSPOOL[Y|11,X]}}
+&quot;&quot;^X^CT,DO{&lt;(/BIGSPOOL[X],Y)^X CT+1^CT,IF{CT\12=0 N(&quot;***Continue***&quot;)^#,#0},N(&quot;Spool file&quot;,X#1S,&quot;-&quot;,X#0S,&quot;pages&quot;)N(&quot; -&gt;&quot;,Y)^#}
+</code></pre>
+
 <h2 id="firewall-tests-from-the-front-end">Firewall tests from the front end</h2>
 <pre><code>%VPN.TEST(&quot;&quot;)
 </code></pre>
