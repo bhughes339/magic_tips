@@ -22,8 +22,11 @@ $G Styling with RAF name and head node:
 ^:RAF[segments]^RAF,RAF%0~(",":32)^BASE
 ""^X^LN,K(/RPT),IF{[RAF] N("["_BASE_"] = ")^/RPT[LN+1^LN,"1"],[RAF]~("^":32)^/RPT[LN,"2"]}
 DO{>([RAF,X],Y)^X N("["_BASE_","_X~(",":32)_"] = ")^/RPT[LN+1^LN,"1"],Y~("^":32)^/RPT[LN,"2"]}
-%Z.copy.raf.to.pc.flat(^/RPT,"C:\Users\username\output.txt","","N")
+%Z.copy.raf.to.pc.flat(^/RPT,"C:\Users\username\output.txt"^/PATH,"","N")
+D(30)_"sh_"_{/PATH}^#
 ```
+
+* Last line is optional--automatically opens the new file in text editor
 
 ## Print packed data to front end
 
