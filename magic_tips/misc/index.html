@@ -421,6 +421,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pad-external-adm-account-number-with-zeroes" title="Pad external ADM account number with zeroes" class="md-nav__link">
+    Pad external ADM account number with zeroes
+  </a>
+  
+</li>
+      
       
       
       
@@ -607,6 +614,13 @@
         <li class="md-nav__item">
   <a href="#physical-vs-logical-nexting" title="Physical vs Logical nexting" class="md-nav__link">
     Physical vs Logical nexting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pad-external-adm-account-number-with-zeroes" title="Pad external ADM account number with zeroes" class="md-nav__link">
+    Pad external ADM account number with zeroes
   </a>
   
 </li>
@@ -898,6 +912,10 @@ IF{@Not(IF{A;B;C}) @DO.THINGS}
 </tr>
 </tbody>
 </table>
+<h2 id="pad-external-adm-account-number-with-zeroes">Pad external ADM account number with zeroes</h2>
+<p>Oftentimes, site and specialists will provide the shorthand version of an ADM account number, which is difficult to work with internally. This will automatically pad the account number with the appropriate number of zeroes for use in the $G utility (specifically, :AAAI):</p>
+<pre><code>&quot;ACCOUNTNUM&quot;^X,L(X,0,1,2,3,4,5,6,7,8,9)^Y,\GPARAM|22-L(X)^Z,N((X$Y)_(0:Z)_(X'$Y))^#
+</code></pre>
                 
                   
                 
