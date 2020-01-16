@@ -430,15 +430,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adm-account-number-aaa" title="ADM account number (aaA)" class="md-nav__link">
-    ADM account number (aaA)
+  <a href="#adm-urn-aa-from-account-number-aaa" title="ADM urn (aa) from account number (aaA)" class="md-nav__link">
+    ADM urn (aa) from account number (aaA)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mri-unit-number-eau" title="MRI unit number (eaU)" class="md-nav__link">
-    MRI unit number (eaU)
+  <a href="#mri-urn-ea-from-unit-number-eau" title="MRI urn (ea) from unit number (eaU)" class="md-nav__link">
+    MRI urn (ea) from unit number (eaU)
   </a>
   
 </li>
@@ -647,15 +647,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adm-account-number-aaa" title="ADM account number (aaA)" class="md-nav__link">
-    ADM account number (aaA)
+  <a href="#adm-urn-aa-from-account-number-aaa" title="ADM urn (aa) from account number (aaA)" class="md-nav__link">
+    ADM urn (aa) from account number (aaA)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mri-unit-number-eau" title="MRI unit number (eaU)" class="md-nav__link">
-    MRI unit number (eaU)
+  <a href="#mri-urn-ea-from-unit-number-eau" title="MRI urn (ea) from unit number (eaU)" class="md-nav__link">
+    MRI urn (ea) from unit number (eaU)
   </a>
   
 </li>
@@ -953,13 +953,13 @@ IF{@Not(IF{A;B;C}) @DO.THINGS}
 </tbody>
 </table>
 <h2 id="pad-external-number-with-zeroes">Pad external number with zeroes</h2>
-<p>Oftentimes, site and specialists will provide the shorthand version of an ADM account number or unit number, which is difficult to work with internally. These snippets will automatically pad the account number with the appropriate number of zeroes for use in the $G utility (specifically, :AAAI and ?EAU).</p>
-<h3 id="adm-account-number-aaa">ADM account number (aaA)</h3>
-<pre><code>&quot;ACCOUNTNUM&quot;^X,L(X,0,1,2,3,4,5,6,7,8,9)^Y,\GPARAM|22-L(X)^Z,N((X$Y)_(0:Z)_(X'$Y))^#
+<p>Oftentimes, site and specialists will provide the shorthand version of an ADM account number or unit number, which is difficult to work with internally. These snippets will automatically pad the account number with the appropriate number of zeroes and output the internal urn.</p>
+<h3 id="adm-urn-aa-from-account-number-aaa">ADM urn (aa) from account number (aaA)</h3>
+<pre><code>&quot;ACCOUNTNUM&quot;^X,L(X,0,1,2,3,4,5,6,7,8,9)^Y,\GPARAM|22-L(X)^Z,N(&quot;aa:&quot;,:AAAI[(X$Y)_(0:Z)_(X'$Y)])^#
 </code></pre>
 
-<h3 id="mri-unit-number-eau">MRI unit number (eaU)</h3>
-<pre><code>&quot;UNITNUM&quot;^X,L(X,0,1,2,3,4,5,6,7,8,9)^Y,\GPARAM|23-L(X)^Z,N((X$Y)_(0:Z)_(X'$Y))^#
+<h3 id="mri-urn-ea-from-unit-number-eau">MRI urn (ea) from unit number (eaU)</h3>
+<pre><code>&quot;UNITNUM&quot;^X,L(X,0,1,2,3,4,5,6,7,8,9)^Y,\GPARAM|23-L(X)^Z,N(&quot;ea:&quot;,?EAU[(X$Y)_(0:Z)_(X'$Y)])^#
 </code></pre>
                 
                   
