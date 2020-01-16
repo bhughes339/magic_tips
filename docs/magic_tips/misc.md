@@ -319,16 +319,16 @@ Using the ABS example above: Without `@Chg.prefix`, @ABS.PAT.account.number tran
 
 ## Pad external number with zeroes
 
-Oftentimes, site and specialists will provide the shorthand version of an ADM account number or unit number, which is difficult to work with internally. These snippets will automatically pad the account number with the appropriate number of zeroes for use in the $G utility (specifically, :AAAI and ?EAU).
+Oftentimes, site and specialists will provide the shorthand version of an ADM account number or unit number, which is difficult to work with internally. These snippets will automatically pad the account number with the appropriate number of zeroes and output the internal urn.
 
-### ADM account number (aaA)
-
-```
-"ACCOUNTNUM"^X,L(X,0,1,2,3,4,5,6,7,8,9)^Y,\GPARAM|22-L(X)^Z,N((X$Y)_(0:Z)_(X'$Y))^#
-```
-
-### MRI unit number (eaU)
+### ADM urn (aa) from account number (aaA)
 
 ```
-"UNITNUM"^X,L(X,0,1,2,3,4,5,6,7,8,9)^Y,\GPARAM|23-L(X)^Z,N((X$Y)_(0:Z)_(X'$Y))^#
+"ACCOUNTNUM"^X,L(X,0,1,2,3,4,5,6,7,8,9)^Y,\GPARAM|22-L(X)^Z,N("aa:",:AAAI[(X$Y)_(0:Z)_(X'$Y)])^#
+```
+
+### MRI urn (ea) from unit number (eaU)
+
+```
+"UNITNUM"^X,L(X,0,1,2,3,4,5,6,7,8,9)^Y,\GPARAM|23-L(X)^Z,N("ea:",?EAU[(X$Y)_(0:Z)_(X'$Y)])^#
 ```
