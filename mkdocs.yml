@@ -2,7 +2,7 @@ site_name: Billy Hughes
 
 nav:
 - 'Home': 'index.md'
-- 'Text Editor Extensions': 'text_ed.md'
+- 'My MEDITECH Tools': 'tools.md'
 - 'Useful MAGIC/CS Tips':
   - 'Printing data structures': 'magic_tips/data_structures.md'
   - 'Debugging': 'magic_tips/debugging.md'
