@@ -21,12 +21,11 @@ $G Styling with RAF name and head node:
 ^<<:RAF[segments]>>^RAF,RAF%0~(",":32)^BASE,RAF#0~(" ":49_("$%&*?\/:!"))^PFX
 ""^X^LN,K(/RPT),IF{[RAF] N(PFX_"["_BASE_"] = ")^/RPT[LN+1^LN,"1"],[RAF]~("^":32)^/RPT[LN,"2"]}
 DO{>([RAF,X],Y)^X N(PFX_"["_BASE_","_X~(",":32)_"] = ")^/RPT[LN+1^LN,"1"],Y~("^":32)^/RPT[LN,"2"]}
-%Z.copy.raf.to.pc.flat(^/RPT,"C:\Users\username\output.txt"^/PATH,"","N")
-D(30)_"sh_"_{/PATH}^#
+%Z.copy.raf.to.pc.flat(^/RPT,"C:\Users\username\output.txt"^/PATH,"","N"),D(30)_"sh_"_{/PATH}^#
 ```
 
 * Replace `<<:RAF[segments]>>` with the structure you're printing (do not replace the `^`)
-* Last line is optional--automatically opens the new file in text editor
+* Replace `"C:\Users\username\output.txt"` with the path to the text file you're writing to
 
 
 ## Print packed data to front end
