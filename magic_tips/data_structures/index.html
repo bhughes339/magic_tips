@@ -372,13 +372,12 @@
 <pre><code>^&lt;&lt;:RAF[segments]&gt;&gt;^RAF,RAF%0~(&quot;,&quot;:32)^BASE,RAF#0~(&quot; &quot;:49_(&quot;$%&amp;*?\/:!&quot;))^PFX
 &quot;&quot;^X^LN,K(/RPT),IF{[RAF] N(PFX_&quot;[&quot;_BASE_&quot;] = &quot;)^/RPT[LN+1^LN,&quot;1&quot;],[RAF]~(&quot;^&quot;:32)^/RPT[LN,&quot;2&quot;]}
 DO{&gt;([RAF,X],Y)^X N(PFX_&quot;[&quot;_BASE_&quot;,&quot;_X~(&quot;,&quot;:32)_&quot;] = &quot;)^/RPT[LN+1^LN,&quot;1&quot;],Y~(&quot;^&quot;:32)^/RPT[LN,&quot;2&quot;]}
-%Z.copy.raf.to.pc.flat(^/RPT,&quot;C:\Users\username\output.txt&quot;^/PATH,&quot;&quot;,&quot;N&quot;)
-D(30)_&quot;sh_&quot;_{/PATH}^#
+%Z.copy.raf.to.pc.flat(^/RPT,&quot;C:\Users\username\output.txt&quot;^/PATH,&quot;&quot;,&quot;N&quot;),D(30)_&quot;sh_&quot;_{/PATH}^#
 </code></pre>
 
 <ul>
 <li>Replace <code>&lt;&lt;:RAF[segments]&gt;&gt;</code> with the structure you're printing (do not replace the <code>^</code>)</li>
-<li>Last line is optional--automatically opens the new file in text editor</li>
+<li>Replace <code>"C:\Users\username\output.txt"</code> with the path to the text file you're writing to</li>
 </ul>
 <h2 id="print-packed-data-to-front-end">Print packed data to front end</h2>
 <pre><code>&lt;PACKED DATA&gt;^X
