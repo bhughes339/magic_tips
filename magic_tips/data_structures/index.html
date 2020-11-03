@@ -358,26 +358,26 @@
                 
                 <h1 id="printing-data-structures">Printing Data Structures</h1>
 <h2 id="output-raf-data-to-a-local-file">Output RAF data to a local file</h2>
+<p><strong>NOTE: These commands will only work in directories with NPR available.</strong></p>
 <pre><code>&quot;&quot;^X^LN,DO{&gt;(:RAF[X],Y)^X N((X:0X)_&quot;^&quot;)^/RPT[LN+1^LN,&quot;1&quot;],Y:0X^/RPT[LN,&quot;2&quot;]}
-%Z.copy.raf.to.pc.flat(^/RPT,&quot;C:\Users\username\output.txt&quot;,&quot;&quot;,&quot;N&quot;)
+D(30)_&quot;DS&quot;^#,%Z.cmd.read(0)^/PATH,%Z.copy.raf.to.pc.flat(^/RPT,/PATH,&quot;&quot;,&quot;N&quot;)
 </code></pre>
 
 <p>$G Styling:</p>
 <pre><code>&quot;&quot;^X^LN,DO{&gt;(:RAF[X],Y)^X N(&quot;[&quot;_X~(&quot;,&quot;:32)_&quot;] = &quot;)^/RPT[LN+1^LN,&quot;1&quot;],Y~(&quot;^&quot;:32)^/RPT[LN,&quot;2&quot;]}
-%Z.copy.raf.to.pc.flat(^/RPT,&quot;C:\Users\username\output.txt&quot;,&quot;&quot;,&quot;N&quot;)
+D(30)_&quot;DS&quot;^#,%Z.cmd.read(0)^/PATH,%Z.copy.raf.to.pc.flat(^/RPT,/PATH,&quot;&quot;,&quot;N&quot;)
 </code></pre>
 
 <p>You can import the text file into a spreadsheet (using ^ as the delimiter) to separate the subscripts and data for easy viewing.</p>
-<p>$G Styling with RAF name and head node:</p>
+<p>$G Styling with RAF name and head node (recommended):</p>
 <pre><code>^&lt;&lt;:RAF[segments]&gt;&gt;^RAF,RAF%0~(&quot;,&quot;:32)^BASE,RAF#0~(&quot; &quot;:49_(&quot;$%&amp;*?\/:!&quot;))^PFX
 &quot;&quot;^X^LN,K(/RPT),IF{[RAF] N(PFX_&quot;[&quot;_BASE_&quot;] = &quot;)^/RPT[LN+1^LN,&quot;1&quot;],[RAF]~(&quot;^&quot;:32)^/RPT[LN,&quot;2&quot;]}
 DO{&gt;([RAF,X],Y)^X N(PFX_&quot;[&quot;_BASE_&quot;,&quot;_X~(&quot;,&quot;:32)_&quot;] = &quot;)^/RPT[LN+1^LN,&quot;1&quot;],Y~(&quot;^&quot;:32)^/RPT[LN,&quot;2&quot;]}
-%Z.copy.raf.to.pc.flat(^/RPT,&quot;C:\Users\billy\output.txt&quot;^/PATH,&quot;&quot;,&quot;N&quot;),D(30)_&quot;sh_&quot;_{/PATH}^#
+D(30)_&quot;DS&quot;^#,%Z.cmd.read(0)^/PATH,%Z.copy.raf.to.pc.flat(^/RPT,/PATH,&quot;&quot;,&quot;N&quot;),D(30)_&quot;sh_&quot;_{/PATH}^#
 </code></pre>
 
 <ul>
 <li>Replace <code>&lt;&lt;:RAF[segments]&gt;&gt;</code> with the structure you're printing (do not replace the <code>^</code>)</li>
-<li>Replace <code>"C:\Users\billy\output.txt"</code> with the path to the text file you're writing to</li>
 </ul>
 <h2 id="print-packed-data-to-front-end">Print packed data to front end</h2>
 <pre><code>&lt;PACKED DATA&gt;^X
