@@ -107,8 +107,7 @@ Example:
 ```
 OPEN NPR
 `MRI,5.67,385.05'^{ia,ir,iaU}
-""^&IA[ia]R[ir]UPD[iaU]
-K(&IA[ia]R[ir]UPD[iaU])
+K(&IA[ia]R[ir]UPD[iaU]),""^&IA[ia]R[ir]UPD[iaU]
 ```
 
 
