@@ -106,8 +106,9 @@ In the Procedures section:
 Example:
 ```
 OPEN NPR
-""^&IA["ADM"]R[5.64]UPD[300.01]
-K(&IA["ADM"]R[5.64]UPD[300.01])
+`MRI,5.67,385.05'^{ia,ir,iaU}
+""^&IA[ia]R[ir]UPD[iaU]
+K(&IA[ia]R[ir]UPD[iaU])
 ```
 
 
