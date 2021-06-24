@@ -9,19 +9,19 @@
       
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
     
     
       
-        <title>Billy Hughes</title>
+        <title>Debugging - Billy Hughes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -36,7 +36,7 @@
     
     
     
-      <link rel="stylesheet" href="extra.css">
+      <link rel="stylesheet" href="../extra.css">
     
     
       
@@ -55,7 +55,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
   
     
-    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#home" class="md-skip">
+        <a href="#debugging" class="md-skip">
           Skip to content
         </a>
       
@@ -74,7 +74,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="Billy Hughes" class="md-header__button md-logo" aria-label="Billy Hughes" data-md-component="logo">
+    <a href="../index.html" title="Billy Hughes" class="md-header__button md-logo" aria-label="Billy Hughes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Debugging
             
           </span>
         </div>
@@ -154,7 +154,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Billy Hughes" class="md-nav__button md-logo" aria-label="Billy Hughes" data-md-component="logo">
+    <a href="../index.html" title="Billy Hughes" class="md-nav__button md-logo" aria-label="Billy Hughes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -171,21 +171,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
         Home
       </a>
-      
     </li>
   
 
@@ -198,7 +188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tools.html" class="md-nav__link">
+      <a href="../tools.html" class="md-nav__link">
         My MEDITECH Tools
       </a>
     </li>
@@ -211,12 +201,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
         Useful MAGIC/CS Tips
@@ -234,7 +226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="magic_tips/data_structures.html" class="md-nav__link">
+      <a href="data_structures.html" class="md-nav__link">
         Printing data structures
       </a>
     </li>
@@ -244,11 +236,79 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="magic_tips/debugging.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Debugging
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="debugging.html" class="md-nav__link md-nav__link--active">
         Debugging
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recovering-from-a-crash" class="md-nav__link">
+    Recovering from a crash
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-zddc" class="md-nav__link">
+    Using %Z.ddc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modify-a-symbol-in-a-magic-ddc" class="md-nav__link">
+    Modify a symbol in a MAGIC DDC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-crash-information-from-the-front-end" class="md-nav__link">
+    Get crash information from the front end
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-all-ascii-values-of-a-string" class="md-nav__link">
+    Get all ASCII values of a string
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -258,7 +318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="magic_tips/misc.html" class="md-nav__link">
+      <a href="misc.html" class="md-nav__link">
         Miscellaneous
       </a>
     </li>
@@ -290,6 +350,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recovering-from-a-crash" class="md-nav__link">
+    Recovering from a crash
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-zddc" class="md-nav__link">
+    Using %Z.ddc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modify-a-symbol-in-a-magic-ddc" class="md-nav__link">
+    Modify a symbol in a MAGIC DDC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-crash-information-from-the-front-end" class="md-nav__link">
+    Get crash information from the front end
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-all-ascii-values-of-a-string" class="md-nav__link">
+    Get all ASCII values of a string
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -301,8 +404,37 @@
               
                 
                 
-                <h1 id="home">Home</h1>
-<p>NOTE: Unless otherwise stated, the commands featured in the "Useful MAGIC/CS Tips" section are designed to be used from the MAGIC front end only.</p>
+                <h1 id="debugging">Debugging</h1>
+<h2 id="recovering-from-a-crash">Recovering from a crash</h2>
+<pre><code>IF{O(%);O(%,1)},IF{O($);O($,%.TREE)},$FE(&quot;&quot;)
+</code></pre>
+<h2 id="using-zddc">Using %Z.ddc</h2>
+<pre><code>%Z.ddc(A,B,C)
+</code></pre>
+<p>Arguments:</p>
+<ul>
+<li>A - String to display when debugger is run</li>
+<li>B - Specific device to invoke debugger code for</li>
+<li>C - Specific user mnemonic to invoke debugger code for</li>
+</ul>
+<p>Example:</p>
+<pre><code>%Z.ddc(&quot;Check symbol table&quot;,&quot;WHUGHES.1&quot;,&quot;MEDITECH&quot;)
+</code></pre>
+<p><a href="https://staff.meditech.com/en/d/clientservices5xprogtraining/pages/mgdebuggers.htm">Page that explains most of the features in %Z.ddc</a></p>
+<h2 id="modify-a-symbol-in-a-magic-ddc">Modify a symbol in a MAGIC DDC</h2>
+<p>Find the correct symbol table with the "??" command. Concatenate the symbol table letter with the variable name and enclose in quotes and square braces. Preface expressions with a semicolon to execute them in a DDC.</p>
+<p>Example: Modifying the <code>DvN</code> symbol on the C table from a DDC:</p>
+<pre><code>;1^[&quot;CDvN&quot;]
+</code></pre>
+<h2 id="get-crash-information-from-the-front-end">Get crash information from the front end</h2>
+<pre><code>O(/S,$MAC[$MAC]_&quot;S&quot;),/R^OS,C(/U),IF{[&quot;AD&quot;] O(/S,$FPH([&quot;AD&quot;])),/#&quot;0,&quot;^PGM,C(/U)},[&quot;AA&quot;]:0X:0S:80T^LINE
+NN(&quot;Program:&quot;:11L,PGM)N(&quot;Line:&quot;:11L,LINE)N(&quot;Error loc:&quot;:11L,[&quot;AB&quot;])N(&quot;OS Version:&quot;,OS)N^#
+</code></pre>
+<p>Use this information in the <code>%WS.ERR("")</code> program in directory ME6:XXX.WSERR</p>
+<p>More info about crash information and the WS.ERR utility can be found <a href="https://docs.google.com/document/d/1taSN4YithwUzTs-zihCgysagtKwKtDee_Yrj7ohW-1E">here</a>.</p>
+<h2 id="get-all-ascii-values-of-a-string">Get all ASCII values of a string</h2>
+<pre><code>$CHX(&quot;&lt;STRING&gt;&quot;)
+</code></pre>
                 
               
               
@@ -321,15 +453,30 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        
+        <a href="data_structures.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Printing data structures" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Printing data structures
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="tools.html" class="md-footer__link md-footer__link--next" aria-label="Next: My MEDITECH Tools" rel="next">
+        <a href="misc.html" class="md-footer__link md-footer__link--next" aria-label="Next: Miscellaneous" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              My MEDITECH Tools
+              Miscellaneous
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -358,10 +505,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
       
     
   </body>
