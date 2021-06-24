@@ -332,3 +332,9 @@ Oftentimes, site and specialists will provide the shorthand version of an ADM ac
 ```
 "UNITNUM"^X,L(X,0,1,2,3,4,5,6,7,8,9)^Y,\GPARAM|23-L(X)^Z,N("ea:",?EAU[(X$Y)_(0:Z)_(X'$Y)])^#
 ```
+
+### Copy text to clipboard from MAGIC front end
+
+```
+D(30)_"CB"^#,"<TEXT TO COPY>"^#,D(0)^#
+```

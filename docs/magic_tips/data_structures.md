@@ -6,18 +6,18 @@
 
 Save to file - $G Styling with RAF name and head node:
 ```
-^<<:RAF[segments]>>^RAF,RAF%0~(",":32)^BASE,RAF#0~(" ":49_("$%&*?\/:!"))^PFX
-""^X^LN,K(/RPT),IF{[RAF] N(PFX_"["_BASE_"] = ")^/RPT[LN+1^LN,"1"],[RAF]~("^":32)^/RPT[LN,"2"]}
-DO{>([RAF,X],Y)^X N(PFX_"["_BASE_","_X~(",":32)_"] = ")^/RPT[LN+1^LN,"1"],Y~("^":32)^/RPT[LN,"2"]}
-D(30)_"DS"^#,%Z.cmd.read(0)^/PATH,%Z.copy.raf.to.pc.flat(^/RPT,/PATH,"","N"),D(30)_"sh_"_{/PATH}^#
+^<<:RAF[segments]>>^RAF,RAF%0~(",":32)^BASE,RAF#0~(" ":49_("$%&*?\/:!"))^PFX,D(13,10)^CR
+""^X^LN,K(/RPT),IF{[RAF] (PFX_"["_BASE_"] = ")^/RPT[LN+1^LN,"1"],[RAF]~("^":32)_CR^/RPT[LN,"2"]}
+DO{>([RAF,X],Y)^X (PFX_"["_BASE_","_X~(",":32)_"] = ")^/RPT[LN+1^LN,"1"],Y~("^":32)_CR^/RPT[LN,"2"]}
+D(30)_"DS"^#,#T[0]^/PATH,%Z.copy.raf.to.pc.flat(^/RPT,/PATH,"","N"),D(30)_"sh_"_{/PATH}^#
 ```
 
 Save structure to temp file and open it:
 ```
-^<<:RAF[segments]>>^RAF,RAF%0~(",":32)^BASE,RAF#0~(" ":49_("$%&*?\/:!"))^PFX
-""^X^LN,K(/RPT),IF{[RAF] N(PFX_"["_BASE_"] = ")^/RPT[LN+1^LN,"1"],[RAF]~("^":32)^/RPT[LN,"2"]}
-DO{>([RAF,X],Y)^X N(PFX_"["_BASE_","_X~(",":32)_"] = ")^/RPT[LN+1^LN,"1"],Y~("^":32)^/RPT[LN,"2"]}
-D(30)_"DpD"_(D(1,6))^#,%Z.cmd.read(0)'#"4\"_"Local\Temp\"_S(0)_".txt"^/PATH
+^<<:RAF[segments]>>^RAF,RAF%0~(",":32)^BASE,RAF#0~(" ":49_("$%&*?\/:!"))^PFX,D(13,10)^CR
+""^X^LN,K(/RPT),IF{[RAF] (PFX_"["_BASE_"] = ")^/RPT[LN+1^LN,"1"],[RAF]~("^":32)_CR^/RPT[LN,"2"]}
+DO{>([RAF,X],Y)^X (PFX_"["_BASE_","_X~(",":32)_"] = ")^/RPT[LN+1^LN,"1"],Y~("^":32)_CR^/RPT[LN,"2"]}
+D(30)_"DpD"_(D(1,6))^#,#T[0]'#"4\"_"Local\Temp\"_S(0)_".txt"^/PATH
 %Z.copy.raf.to.pc.flat(^/RPT,/PATH,"","N"),D(30)_"sh_"_{/PATH}^#
 ```
 
