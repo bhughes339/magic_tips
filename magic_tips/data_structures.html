@@ -380,15 +380,15 @@
 <h2 id="output-raf-data-to-a-local-file">Output RAF data to a local file</h2>
 <p><strong>NOTE: These commands will only work in directories with NPR available.</strong></p>
 <p>Save to file - $G Styling with RAF name and head node:</p>
-<pre><code>^&lt;&lt;:RAF[segments]&gt;&gt;^RAF,RAF%0~(&quot;,&quot;:32)^BASE,RAF#0~(&quot; &quot;:49_(&quot;$%&amp;*?\/:!&quot;))^PFX,D(13,10)^CR
-&quot;&quot;^X^LN,K(/RPT),IF{[RAF] (PFX_&quot;[&quot;_BASE_&quot;] = &quot;)^/RPT[LN+1^LN,&quot;1&quot;],[RAF]~(&quot;^&quot;:32)_CR^/RPT[LN,&quot;2&quot;]}
-DO{&gt;([RAF,X],Y)^X (PFX_&quot;[&quot;_BASE_&quot;,&quot;_X~(&quot;,&quot;:32)_&quot;] = &quot;)^/RPT[LN+1^LN,&quot;1&quot;],Y~(&quot;^&quot;:32)_CR^/RPT[LN,&quot;2&quot;]}
+<pre><code>^&lt;&lt;:RAF[segments]&gt;&gt;^RAF,RAF%0~(&quot;,&quot;:32)^BASE,RAF#0~(&quot; &quot;:49_(&quot;$%&amp;*?\/:!&quot;))^PFX
+&quot;&quot;^X^LN,K(/RPT),IF{[RAF] (PFX_&quot;[&quot;_BASE_&quot;] = &quot;)^/RPT[LN+1^LN,&quot;1&quot;],I([RAF]~(&quot;^&quot;:32))N^/RPT[LN,&quot;2&quot;]}
+DO{&gt;([RAF,X],Y)^X (PFX_&quot;[&quot;_BASE_&quot;,&quot;_X~(&quot;,&quot;:32)_&quot;] = &quot;)^/RPT[LN+1^LN,&quot;1&quot;],I(Y~(&quot;^&quot;:32))N^/RPT[LN,&quot;2&quot;]}
 D(30)_&quot;DS&quot;^#,#T[0]^/PATH,%Z.copy.raf.to.pc.flat(^/RPT,/PATH,&quot;&quot;,&quot;N&quot;),D(30)_&quot;sh_&quot;_{/PATH}^#
 </code></pre>
 <p>Save structure to temp file and open it:</p>
-<pre><code>^&lt;&lt;:RAF[segments]&gt;&gt;^RAF,RAF%0~(&quot;,&quot;:32)^BASE,RAF#0~(&quot; &quot;:49_(&quot;$%&amp;*?\/:!&quot;))^PFX,D(13,10)^CR
-&quot;&quot;^X^LN,K(/RPT),IF{[RAF] (PFX_&quot;[&quot;_BASE_&quot;] = &quot;)^/RPT[LN+1^LN,&quot;1&quot;],[RAF]~(&quot;^&quot;:32)_CR^/RPT[LN,&quot;2&quot;]}
-DO{&gt;([RAF,X],Y)^X (PFX_&quot;[&quot;_BASE_&quot;,&quot;_X~(&quot;,&quot;:32)_&quot;] = &quot;)^/RPT[LN+1^LN,&quot;1&quot;],Y~(&quot;^&quot;:32)_CR^/RPT[LN,&quot;2&quot;]}
+<pre><code>^&lt;&lt;:RAF[segments]&gt;&gt;^RAF,RAF%0~(&quot;,&quot;:32)^BASE,RAF#0~(&quot; &quot;:49_(&quot;$%&amp;*?\/:!&quot;))^PFX
+&quot;&quot;^X^LN,K(/RPT),IF{[RAF] (PFX_&quot;[&quot;_BASE_&quot;] = &quot;)^/RPT[LN+1^LN,&quot;1&quot;],I([RAF]~(&quot;^&quot;:32))N^/RPT[LN,&quot;2&quot;]}
+DO{&gt;([RAF,X],Y)^X (PFX_&quot;[&quot;_BASE_&quot;,&quot;_X~(&quot;,&quot;:32)_&quot;] = &quot;)^/RPT[LN+1^LN,&quot;1&quot;],I(Y~(&quot;^&quot;:32))N^/RPT[LN,&quot;2&quot;]}
 D(30)_&quot;DpD&quot;_(D(1,6))^#,#T[0]'#&quot;4\&quot;_&quot;Local\Temp\&quot;_S(0)_&quot;.txt&quot;^/PATH
 %Z.copy.raf.to.pc.flat(^/RPT,/PATH,&quot;&quot;,&quot;N&quot;),D(30)_&quot;sh_&quot;_{/PATH}^#
 </code></pre>
